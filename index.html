@@ -25,6 +25,7 @@
             --shadow-strong: rgba(93, 51, 234, 0.25);
             --nav-bg: rgba(255, 255, 255, 0.7);
             --nav-link: rgba(31, 41, 55, 0.8);
+            --theme-transition-duration: 0.3s;
         }
 
         [data-theme="dark"] {
@@ -49,7 +50,7 @@
             min-height: 100vh;
             overflow-x: hidden;
             color: var(--text-primary);
-            transition: background 0.5s ease, color 0.3s ease;
+            transition: background var(--theme-transition-duration) ease, color var(--theme-transition-duration) ease;
         }
 
         body.theme-animating {
@@ -83,6 +84,7 @@
             align-items: center;
             gap: 3rem;
             border-bottom: 1px solid var(--glass-border);
+            transition: background var(--theme-transition-duration) ease, border-color var(--theme-transition-duration) ease, color var(--theme-transition-duration) ease, box-shadow var(--theme-transition-duration) ease;
             z-index: 1000;
         }
 
@@ -109,7 +111,7 @@
             color: var(--nav-link);
             position: relative;
             padding-bottom: 4px;
-            transition: color 0.3s ease;
+            transition: color var(--theme-transition-duration) ease;
         }
 
         .nav-links a::after {
@@ -198,6 +200,7 @@
             position: relative;
             overflow: hidden;
             box-shadow: 0 30px 90px rgba(219, 39, 119, 0.35);
+            transition: background var(--theme-transition-duration) ease, box-shadow var(--theme-transition-duration) ease, color var(--theme-transition-duration) ease, border-color var(--theme-transition-duration) ease;
         }
 
         .hero::before {
@@ -249,6 +252,7 @@
             border: 4px solid rgba(255, 255, 255, 0.3);
             overflow: hidden;
             flex-shrink: 0;
+            transition: background var(--theme-transition-duration) ease, border-color var(--theme-transition-duration) ease, box-shadow var(--theme-transition-duration) ease;
         }
 
         .profile-image img {
@@ -436,7 +440,7 @@
             color: #ffffff;
             box-shadow: 0 18px 40px rgba(15, 23, 42, 0.25);
             backdrop-filter: blur(14px);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background var(--theme-transition-duration) ease, border-color var(--theme-transition-duration) ease, color var(--theme-transition-duration) ease;
         }
 
         .metric-card:hover {
@@ -464,6 +468,7 @@
             margin-bottom: 52px;
             box-shadow: 0 24px 60px var(--shadow);
             backdrop-filter: blur(18px);
+            transition: background var(--theme-transition-duration) ease, box-shadow var(--theme-transition-duration) ease, color var(--theme-transition-duration) ease, border-color var(--theme-transition-duration) ease;
         }
 
         .section-title {
@@ -487,7 +492,7 @@
             border-radius: 20px;
             padding: 22px;
             border: 2px solid transparent;
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background var(--theme-transition-duration) ease, color var(--theme-transition-duration) ease;
             box-shadow: 0 16px 32px var(--shadow);
         }
 
@@ -518,6 +523,7 @@
             font-size: 28px;
             background: #ffffff;
             box-shadow: 0 10px 20px var(--shadow);
+            transition: background var(--theme-transition-duration) ease, color var(--theme-transition-duration) ease, box-shadow var(--theme-transition-duration) ease;
         }
 
         [data-theme="dark"] .skill-icon {
@@ -544,6 +550,7 @@
             font-weight: 600;
             color: #7c3aed;
             box-shadow: 0 4px 12px var(--shadow);
+            transition: background var(--theme-transition-duration) ease, color var(--theme-transition-duration) ease, box-shadow var(--theme-transition-duration) ease;
         }
 
         .projects-grid {
@@ -557,7 +564,7 @@
             border-radius: 22px;
             overflow: hidden;
             box-shadow: 0 18px 36px var(--shadow);
-            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, background var(--theme-transition-duration) ease, color var(--theme-transition-duration) ease;
             border: 2px solid transparent;
             min-height: 100%;
         }
@@ -615,6 +622,7 @@
             font-size: 12px;
             font-weight: 600;
             color: #9333ea;
+            transition: background var(--theme-transition-duration) ease, color var(--theme-transition-duration) ease;
         }
 
         .timeline {
@@ -651,6 +659,7 @@
             border-radius: 50%;
             background: var(--accent-gradient);
             box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+            transition: background var(--theme-transition-duration) ease, box-shadow var(--theme-transition-duration) ease;
         }
 
         .timeline-content {
@@ -658,6 +667,7 @@
             border-radius: 18px;
             padding: 22px;
             box-shadow: 0 16px 32px var(--shadow);
+            transition: background var(--theme-transition-duration) ease, box-shadow var(--theme-transition-duration) ease, color var(--theme-transition-duration) ease, border-color var(--theme-transition-duration) ease;
         }
 
         [data-theme="dark"] .timeline-content {
@@ -698,6 +708,7 @@
             border: 1px solid rgba(124, 58, 237, 0.18);
             box-shadow: 0 20px 40px var(--shadow);
             position: relative;
+            transition: background var(--theme-transition-duration) ease, border-color var(--theme-transition-duration) ease, box-shadow var(--theme-transition-duration) ease, color var(--theme-transition-duration) ease;
         }
 
         [data-theme="dark"] .testimonial-card {
@@ -750,7 +761,7 @@
             text-decoration: none;
             display: block;
             box-shadow: 0 22px 48px rgba(124, 58, 237, 0.35);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background var(--theme-transition-duration) ease, color var(--theme-transition-duration) ease;
         }
 
         .contact-card:hover {
@@ -782,6 +793,7 @@
             padding: 40px 20px;
             color: rgba(15, 23, 42, 0.6);
             font-size: 14px;
+            transition: color var(--theme-transition-duration) ease, background var(--theme-transition-duration) ease;
         }
 
         [data-theme="dark"] .footer {
@@ -1177,6 +1189,10 @@
     </div>
     <script>
         let themeCycleInterval;
+        let themeTransitionTimeout;
+        const DEFAULT_THEME_TRANSITION = "0.3s";
+        const SLOW_THEME_TRANSITION = "1.8s";
+        const THEME_RESET_DELAY = 1800;
 
         function triggerThemeAnimation() {
             const body = document.body;
@@ -1193,7 +1209,16 @@
             if (!html || !themeIcon) return;
             const resolvedTheme = theme === "dark" ? "dark" : "light";
             if (animate) {
+                if (themeTransitionTimeout) {
+                    clearTimeout(themeTransitionTimeout);
+                }
+                html.style.setProperty("--theme-transition-duration", SLOW_THEME_TRANSITION);
+                themeTransitionTimeout = setTimeout(() => {
+                    html.style.setProperty("--theme-transition-duration", DEFAULT_THEME_TRANSITION);
+                }, THEME_RESET_DELAY);
                 triggerThemeAnimation();
+            } else {
+                html.style.setProperty("--theme-transition-duration", DEFAULT_THEME_TRANSITION);
             }
             if (resolvedTheme === "dark") {
                 html.setAttribute("data-theme", "dark");

@@ -25,7 +25,7 @@
             --shadow-strong: rgba(93, 51, 234, 0.25);
             --nav-bg: rgba(255, 255, 255, 0.7);
             --nav-link: rgba(31, 41, 55, 0.8);
-            --theme-transition-duration: 0.3s;
+            --theme-transition-duration: 60s;
         }
 
         [data-theme="dark"] {
@@ -1191,8 +1191,8 @@
         let themeCycleInterval;
         let themeTransitionTimeout;
         const DEFAULT_THEME_TRANSITION = "0.3s";
-        const SLOW_THEME_TRANSITION = "1.8s";
-        const THEME_RESET_DELAY = 1800;
+        const SLOW_THEME_TRANSITION = "60s";
+        const THEME_RESET_DELAY = 60000;
 
         function triggerThemeAnimation() {
             const body = document.body;
